@@ -1,0 +1,11 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <!--添加[class.selected]绑定到<li>的HeroesComponent模板-->
+  <!--添加单击事件绑定-->
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

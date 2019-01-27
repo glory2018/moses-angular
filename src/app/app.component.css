@@ -1,0 +1,61 @@
+/* Application-wide Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  margin: 2em;
+}
+
+body, input[type="text"], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*第一行标题蓝色背景*/
+table tr:first-child {
+  background: #0066CC;
+  color: #fff;
+  font-weight: bold;
+}
+
+table {
+  border-top: 1pt solid #C1DAD7;
+  border-left: 1pt solid #C1DAD7;
+  margin: 0 auto;
+}
+
+td {
+  padding: 5px 10px;
+  text-align: center;
+  border-right: 1pt solid #C1DAD7;
+  border-bottom: 1pt solid #C1DAD7;
+}
+
+/* odd 标识奇数行，even标识偶数行 */
+tr:nth-of-type(odd) {
+  background: #c6f9f7
+}
+
+/*3的倍数行红色背景*/
+tr:nth-child(3n+1) {
+  background: #FF0000;
+}
+
+/* 悬停鼠标变色 */
+tr:hover {
+  background: #E0F0F0;
+}

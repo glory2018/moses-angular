@@ -1,0 +1,12 @@
+<!--使用* ngIf 隐藏空白详细信息-->
+<div *ngIf="hero">
+  <!--格式化-->
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <!--双向绑定 需要导入FormsModule-->
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+</div>
