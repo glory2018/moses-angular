@@ -1,26 +1,44 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms'; // <-- NgModel lives here
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+// 导入符号@angular/common/http
+import {HttpClientModule} from '@angular/common/http';
+// 导入HttpClientInMemoryWebApiModule的InMemoryDataService类
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemoryDataService} from './in-memory-data.service';
+
+import {AppRoutingModule} from './app-routing.module';
+
 import {AppComponent} from './app.component';
-import {HeroesComponent} from './heroes/heroes.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 import {HeroDetailComponent} from './hero-detail/hero-detail.component';
+import {HeroesComponent} from './heroes/heroes.component';
+import {HeroSearchComponent} from './hero-search/hero-search.component';
 import {MessagesComponent} from './messages/messages.component';
 
 @NgModule({
-  // 声明HeroesComponent
-  declarations: [
-    AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent
-  ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    // 添加HttpClientInMemoryWebApiModule到数组 中
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+    HeroSearchComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  title = '王者归来';
 }
