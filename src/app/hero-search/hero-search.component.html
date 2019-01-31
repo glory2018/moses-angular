@@ -1,9 +1,10 @@
 <div id="search-component">
   <h4>Hero Search</h4>
-
+  <!--search()通过绑定到文本框input事件的事件来调用该方法。-->
   <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
-
   <ul class="search-result">
+    <!--这$是一个表示heroes$是Observable，而不是数组的约定。-->
+    <!--标识了Angular的。*ngForObservable|asyncAsyncPipe-->
     <li *ngFor="let hero of heroes$ | async">
       <a routerLink="/detail/{{hero.id}}">
         {{hero.name}}
