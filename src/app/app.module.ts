@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 // 导入HttpClientInMemoryWebApiModule的InMemoryDataService类
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {InMemoryDataService} from './in-memory-data.service';
+import {InMemoryDataService} from './services/in-memory-data.service';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -15,6 +15,7 @@ import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {HeroesComponent} from './heroes/heroes.component';
 import {HeroSearchComponent} from './hero-search/hero-search.component';
 import {MessagesComponent} from './messages/messages.component';
+import {ReportComponent} from './report/report.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import {MessagesComponent} from './messages/messages.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
+    ReportComponent,
     HeroSearchComponent
   ],
   bootstrap: [AppComponent]

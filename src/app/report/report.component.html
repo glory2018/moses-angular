@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>报表实例</h2>
+  <div class="container-fluid">
+    <nav class="breadcrumb">
+      <button class="clear"
+              (click)="reportChange('product')">product
+      </button>
+      <button class="clear"
+              (click)="reportChange('crosstab')">crosstab
+      </button>
+    </nav>
+    <div class="row">
+      <div class="col-md-3 bg-success">
+        <p>上传图片显示缩略图</p>
+        <img height="100px" width="100px" [src]="sanitizer.bypassSecurityTrustUrl(imgsrc)">
+        <input type="file" (change)="fileChange($event)">
+      </div>
+      <div class="col-md-9 bg-warning">
+        <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(reportSrc)" class="report"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
