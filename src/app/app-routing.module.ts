@@ -4,6 +4,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {HeroesComponent} from './heroes/heroes.component';
 import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {ReportComponent} from "./report/report.component";
+import {VideoComponent} from "./video/video.component";
 // path：与浏览器地址栏中的URL匹配的字符串。
 // component：导航到此路由时路由器应创建的组件。
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'detail/:id', component: HeroDetailComponent},
   {path: 'heroes', component: HeroesComponent},
-  {path: 'report', component: ReportComponent}
+  {path: 'report', component: ReportComponent},
+  {path: 'video', component: VideoComponent},
 ];
 
 @NgModule({

@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <p>
+        <video id="video1" class="video1" preload="auto"              data-setup="{}">
+          <source src="./assets/video/mov_bbb.mp4" type="video/mp4">
+          您的浏览器不支持 HTML5 video 标签。
+          <track label="English" kind="subtitles" srclang="en" src="./assets/vtt/sintel-en.vtt" default>
+          <track label="Chinese" kind="subtitles" srclang="cn" src="./assets/vtt/sintel-cn.vtt">
+        </video>
+      </p>
+      <p>
+        <button type="button" class="btn btn-default btn-sm" (click)="play()">
+          <span class="glyphicon glyphicon-play"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm" (click)="pause()">
+          <span class="glyphicon glyphicon-pause"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm" (click)="increase()">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm" (click)="decrease()">
+          <span class="glyphicon glyphicon-minus"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm" (click)="rePlay()">
+          <span class="glyphicon glyphicon-stop"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm" (click)="muted()">
+          <span class="glyphicon glyphicon-headphones"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm" (click)="like()">
+          <span class="glyphicon glyphicon-thumbs-up"></span>
+        </button>
+        <span id="like"></span>
+        <button type="button" class="btn btn-default btn-sm" (click)="unLike()">
+          <span class="glyphicon glyphicon-thumbs-down"></span>
+        </button>
+        <span id="unLike"></span>
+      </p>
+      <p>
+        <span>进度条:</span>
+        <progress value="0" max="0" id="pro"></progress>
+      </p>
+    </div>
+    <div class="col-sm-6">
+      <p>
+        <button type="button" class="btn btn-default btn-sm" (click)="change('mov_1.mp4')">
+          <span class="glyphicon glyphicon-play"></span>Introduction to HTML5
+        </button>
+      </p>
+      <p>
+        <button type="button" class="btn btn-default btn-sm" (click)="change('mov_2.mp4')">
+          <span class="glyphicon glyphicon-play"></span>Introduction to Styling with CSS3
+        </button>
+      </p>
+      <p>
+        <button type="button" class="btn btn-default btn-sm" (click)="change('mov_1.mp4')">
+          <span class="glyphicon glyphicon-play"></span>Introduction to Bootstrap 4
+        </button>
+      </p>
+      <p>
+        <button type="button" class="btn btn-default btn-sm" (click)="change('mov_2.mp4')">
+          <span class="glyphicon glyphicon-play"></span>Learn to create website with HTML5, CSS3 and
+          Bootstrap4
+        </button>
+      </p>
+      <p>
+        <button type="button" class="btn btn-default btn-sm" (click)="change('mov_1.mp4')">
+          <span class="glyphicon glyphicon-play"></span>Introduction to Javascript
+        </button>
+      </p>
+    </div>
+  </div>
+  <script src="video.js"></script>
+</div>

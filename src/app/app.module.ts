@@ -15,7 +15,8 @@ import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {HeroesComponent} from './heroes/heroes.component';
 import {HeroSearchComponent} from './hero-search/hero-search.component';
 import {MessagesComponent} from './messages/messages.component';
-import {ReportComponent} from './report/report.component';
+import {VideoComponent} from './video/video.component'
+import {ReportComponent} from "./report/report.component";
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import {ReportComponent} from './report/report.component';
     HeroDetailComponent,
     MessagesComponent,
     ReportComponent,
+    VideoComponent,
     HeroSearchComponent
   ],
   bootstrap: [AppComponent]
